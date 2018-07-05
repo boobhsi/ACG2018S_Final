@@ -1,0 +1,372 @@
+# Converted from "maguro-don.obj" by obj2pbrt
+# Scene bounds: (-28.536249, -8.872023, -28.536249) - (28.536249, 12.282647, 28.536249)
+LookAt 1.32372 7.35239 5.01891 -0.183023 0.513503 -0.838342 -0.095725 0.858002 -0.504648
+Camera "perspective" "float fov" 48
+
+Sampler "halton" "integer pixelsamples" 128
+Integrator "path"
+Film "image" "string filename" "simple.png"
+     "integer xresolution" [320] "integer yresolution" [180]
+
+
+WorldBegin
+AttributeBegin
+CoordSysTransform "camera"
+LightSource "point" "color I" [10 10 10]
+AttributeEnd
+
+MakeNamedMaterial "CP_flakes_04" 
+        "float roughness" [ 0.0104080001 ] 
+        "float index" [ 1 ] 
+        "string type" [ "uber" ] 
+        "rgb Kd" [ 0.0, 0.1, 0.0 ] 
+        "rgb Ks" [ 0.5 0.5 0.5 ] 
+        "rgb Kt" [ 0 0 0 ] 
+        "rgb opacity" [ 1 1 1 ] 
+MakeNamedMaterial "Material.001" 
+        "float roughness" [ 0.0104080001 ] 
+        "float index" [ 1 ] 
+        "string type" [ "uber" ] 
+        "rgb Kd" [ 0.1, 0.0, 0.0 ] 
+        "rgb Ks" [ 0.5 0.5 0.5 ] 
+        "rgb Kt" [ 0 0 0 ] 
+        "rgb opacity" [ 1 1 1 ] 
+MakeNamedMaterial "Material.002" 
+        "float roughness" [ 0.0104080001 ] 
+        "float index" [ 1 ] 
+        "string type" [ "uber" ] 
+        "rgb Kd" [ 0.639999986 0.639999986 0.639999986 ] 
+        "rgb Ks" [ 0.5 0.5 0.5 ] 
+        "rgb Kt" [ 0 0 0 ] 
+        "rgb opacity" [ 1 1 1 ] 
+MakeNamedMaterial "chopstick_wood_02_G" 
+        "float roughness" [ 0.0104080001 ] 
+        "float index" [ 1 ] 
+        "string type" [ "uber" ] 
+        "rgb Kd" [ 0.639999986 0.449295998 0.225715995 ] 
+        "rgb Ks" [ 0.5 0.5 0.5 ] 
+        "rgb Kt" [ 0 0 0 ] 
+        "rgb opacity" [ 1 1 1 ] 
+MakeNamedMaterial "emission1" 
+        "float roughness" [ 0.0104080001 ] 
+        "float index" [ 1 ] 
+        "string type" [ "uber" ] 
+        "rgb Kd" [ 0.639999986 0.639999986 0.639999986 ] 
+        "rgb Ks" [ 0.5 0.5 0.5 ] 
+        "rgb Kt" [ 0 0 0 ] 
+        "rgb opacity" [ 1 1 1 ] 
+MakeNamedMaterial "ikura_material" 
+        "float roughness" [ 0.0104080001 ] 
+        "float index" [ 1 ] 
+        "string type" [ "uber" ] 
+        "rgb Kd" [ 0.639999986 0.639999986 0.639999986 ] 
+        "rgb Ks" [ 0.5 0.5 0.5 ] 
+        "rgb Kt" [ 0 0 0 ] 
+        "rgb opacity" [ 1 1 1 ] 
+MakeNamedMaterial "maguro_material" 
+        "float roughness" [ 0.0104080001 ] 
+        "float index" [ 1 ] 
+        "string type" [ "uber" ] 
+        "rgb Kd" [ 0.639999986 0.639999986 0.639999986 ] 
+        "rgb Ks" [ 0.5 0.5 0.5 ] 
+        "rgb Kt" [ 0 0 0 ] 
+        "rgb opacity" [ 1 1 1 ] 
+MakeNamedMaterial "rice_hair_emitter_collisionwrap_material" 
+        "float roughness" [ 0.0104080001 ] 
+        "float index" [ 1 ] 
+        "string type" [ "uber" ] 
+        "rgb Kd" [ 0.639999986 0.639999986 0.639999986 ] 
+        "rgb Ks" [ 0.5 0.5 0.5 ] 
+        "rgb Kt" [ 0 0 0 ] 
+        "rgb opacity" [ 1 1 1 ] 
+MakeNamedMaterial "rice_hair_emitter_material" 
+        "float roughness" [ 0.0104080001 ] 
+        "float index" [ 1 ] 
+        "string type" [ "uber" ] 
+        "rgb Kd" [ 0.639999986 0.639999986 0.639999986 ] 
+        "rgb Ks" [ 0.5 0.5 0.5 ] 
+        "rgb Kt" [ 0 0 0 ] 
+        "rgb opacity" [ 1 1 1 ] 
+MakeNamedMaterial "rice_subscatter_glossy" 
+        "float roughness" [ 0.0104080001 ] 
+        "float index" [ 1 ] 
+        "string type" [ "uber" ] 
+        "rgb Kd" [ 0.639999986 0.639999986 0.639999986 ] 
+        "rgb Ks" [ 0.5 0.5 0.5 ] 
+        "rgb Kt" [ 0 0 0 ] 
+        "rgb opacity" [ 1 1 1 ] 
+# Name "Plane_Plane.003"
+MakeNamedMaterial "wasabi_EA_distance_shader_G" 
+        "float roughness" [ 0.0104080001 ] 
+        "float index" [ 1 ] 
+        "string type" [ "uber" ] 
+        "rgb Kd" [ 0.639999986 0.620000005 0.560000002 ] 
+        "rgb Ks" [ 0.5 0.5 0.5 ] 
+        "rgb Kt" [ 0 0 0 ] 
+        "rgb opacity" [ 1 1 1 ] 
+
+AttributeBegin
+    NamedMaterial "Material.001"
+    Shape "trianglemesh" 
+            "integer indices" [ 0 1 2 0 2 3 ] 
+            "point P" [ -28.5362492 4.13960314 28.5362492 28.5362492 4.13960314 28.5362492 
+            28.5362492 4.13960314 -28.5362492 -28.5362492 4.13960314 -28.5362492 ] 
+            "normal N" [ 0 1 0 0 1 0 0 1 0 0 1 0 ] 
+AttributeEnd
+# Name "light_plane.001_Plane.002"
+
+AttributeBegin
+    NamedMaterial "emission1"
+    Shape "trianglemesh" 
+            "integer indices" [ 0 1 2 0 2 3 ] 
+            "point P" [ -3.648103 4.60261202 -3.84544706 1.12750196 4.31466484 -5.48629284 
+            1.342273 7.5430088 -5.42774391 -3.43333197 7.83095598 -3.78689694 ] 
+            "normal N" [ 0.322600007 -0.0386000015 0.94569999 0.322600007 -0.0386000015 0.94569999 
+            0.322600007 -0.0386000015 0.94569999 0.322600007 -0.0386000015 0.94569999 ] 
+AttributeEnd
+# Name "light_plane_Plane"
+
+AttributeBegin
+    NamedMaterial "Material.002"
+    Shape "trianglemesh" 
+            "integer indices" [ 0 1 2 0 2 3 ] 
+            "point P" [ -5.95910692 7.93883181 6.28769493 0.750200987 6.64607477 11.2823029 
+            3.65327692 10.9898911 8.50688362 -3.05603099 12.2826471 3.51227593 ] 
+            "normal N" [ -0.361600012 0.661499977 0.657000005 -0.361600012 0.661499977 0.657000005 
+            -0.361600012 0.661499977 0.657000005 -0.361600012 0.661499977 0.657000005 ] 
+AttributeEnd
+# Name "chawan_Circle.022"
+
+AttributeBegin
+    NamedMaterial "CP_flakes_04"
+    Shape "plymesh" "string filename" "mesh_00001.ply" 
+AttributeEnd
+# Name "chawan_collision_wrap_Sphere.006"
+
+AttributeBegin
+    NamedMaterial "rice_hair_emitter_collisionwrap_material"
+    Shape "plymesh" "string filename" "mesh_00002.ply" 
+AttributeEnd
+# Name "chopstick_left_Cube.001"
+
+AttributeBegin
+    NamedMaterial "chopstick_wood_02_G"
+    Shape "plymesh" "string filename" "mesh_00003.ply" 
+AttributeEnd
+# Name "chopstick_right_Cube.002"
+
+AttributeBegin
+    NamedMaterial "chopstick_wood_02_G"
+    Shape "plymesh" "string filename" "mesh_00004.ply" 
+AttributeEnd
+# Name "ikura.001_Sphere.001"
+
+AttributeBegin
+    NamedMaterial "ikura_material"
+    Shape "plymesh" "string filename" "mesh_00005.ply" 
+AttributeEnd
+# Name "ikura.002_Sphere.002"
+
+AttributeBegin
+    NamedMaterial "ikura_material"
+    Shape "plymesh" "string filename" "mesh_00006.ply" 
+AttributeEnd
+# Name "ikura.003_Sphere.003"
+
+AttributeBegin
+    NamedMaterial "ikura_material"
+    Shape "plymesh" "string filename" "mesh_00007.ply" 
+AttributeEnd
+# Name "ikura.004_Sphere.004"
+
+AttributeBegin
+    NamedMaterial "ikura_material"
+    Shape "plymesh" "string filename" "mesh_00008.ply" 
+AttributeEnd
+# Name "ikura.005_Sphere.005"
+
+AttributeBegin
+    NamedMaterial "ikura_material"
+    Shape "plymesh" "string filename" "mesh_00009.ply" 
+AttributeEnd
+# Name "ikura.006_Sphere.011"
+
+AttributeBegin
+    NamedMaterial "ikura_material"
+    Shape "plymesh" "string filename" "mesh_00010.ply" 
+AttributeEnd
+# Name "ikura.007_Sphere.012"
+
+AttributeBegin
+    NamedMaterial "ikura_material"
+    Shape "plymesh" "string filename" "mesh_00011.ply" 
+AttributeEnd
+# Name "ikura.008_Sphere.013"
+
+AttributeBegin
+    NamedMaterial "ikura_material"
+    Shape "plymesh" "string filename" "mesh_00012.ply" 
+AttributeEnd
+# Name "ikura.009_Sphere.014"
+
+AttributeBegin
+    NamedMaterial "ikura_material"
+    Shape "plymesh" "string filename" "mesh_00013.ply" 
+AttributeEnd
+# Name "ikura.010_Sphere.015"
+
+AttributeBegin
+    NamedMaterial "ikura_material"
+    Shape "plymesh" "string filename" "mesh_00014.ply" 
+AttributeEnd
+# Name "ikura.011_Sphere.016"
+
+AttributeBegin
+    NamedMaterial "ikura_material"
+    Shape "plymesh" "string filename" "mesh_00015.ply" 
+AttributeEnd
+# Name "ikura_Sphere.007"
+
+AttributeBegin
+    NamedMaterial "ikura_material"
+    Shape "plymesh" "string filename" "mesh_00016.ply" 
+AttributeEnd
+# Name "rice_hair_emitter_collisionwrap_Sphere.010"
+
+AttributeBegin
+    NamedMaterial "rice_hair_emitter_collisionwrap_material"
+    Shape "plymesh" "string filename" "mesh_00017.ply" 
+AttributeEnd
+# Name "maguro_fraction3_Icosphere.002"
+
+AttributeBegin
+    NamedMaterial "maguro_material"
+    Shape "plymesh" "string filename" "mesh_00018.ply" 
+AttributeEnd
+# Name "maguro_fraction4_Icosphere.006"
+
+AttributeBegin
+    NamedMaterial "maguro_material"
+    Shape "plymesh" "string filename" "mesh_00019.ply" 
+AttributeEnd
+# Name "maguro_fraction5_Icosphere"
+
+AttributeBegin
+    NamedMaterial "maguro_material"
+    Shape "plymesh" "string filename" "mesh_00020.ply" 
+AttributeEnd
+# Name "maguro_slice1.001_Cube.004"
+
+AttributeBegin
+    NamedMaterial "maguro_material"
+    Shape "plymesh" "string filename" "mesh_00021.ply" 
+AttributeEnd
+# Name "maguro_slice1.002_Cube.006"
+
+AttributeBegin
+    NamedMaterial "maguro_material"
+    Shape "plymesh" "string filename" "mesh_00022.ply" 
+AttributeEnd
+# Name "maguro_slice1.003_Cube.007"
+
+AttributeBegin
+    NamedMaterial "maguro_material"
+    Shape "plymesh" "string filename" "mesh_00023.ply" 
+AttributeEnd
+# Name "maguro_slice1.004_Cube.008"
+
+AttributeBegin
+    NamedMaterial "maguro_material"
+    Shape "plymesh" "string filename" "mesh_00024.ply" 
+AttributeEnd
+# Name "maguro_slice1.005_Cube.009"
+
+AttributeBegin
+    NamedMaterial "maguro_material"
+    Shape "plymesh" "string filename" "mesh_00025.ply" 
+AttributeEnd
+# Name "maguro_slice1.006_Cube.010"
+
+AttributeBegin
+    NamedMaterial "maguro_material"
+    Shape "plymesh" "string filename" "mesh_00026.ply" 
+AttributeEnd
+# Name "maguro_slice1.007_Cube.011"
+
+AttributeBegin
+    NamedMaterial "maguro_material"
+    Shape "plymesh" "string filename" "mesh_00027.ply" 
+AttributeEnd
+# Name "maguro_slice1.008_Cube.012"
+
+AttributeBegin
+    NamedMaterial "maguro_material"
+    Shape "plymesh" "string filename" "mesh_00028.ply" 
+AttributeEnd
+# Name "maguro_slice1.009_Cube.013"
+
+AttributeBegin
+    NamedMaterial "maguro_material"
+    Shape "plymesh" "string filename" "mesh_00029.ply" 
+AttributeEnd
+# Name "maguro_slice1.010_Cube.014"
+
+AttributeBegin
+    NamedMaterial "maguro_material"
+    Shape "plymesh" "string filename" "mesh_00030.ply" 
+AttributeEnd
+# Name "maguro_slice1.011_Cube.015"
+
+AttributeBegin
+    NamedMaterial "maguro_material"
+    Shape "plymesh" "string filename" "mesh_00031.ply" 
+AttributeEnd
+# Name "maguro_slice1.012_Cube.016"
+
+AttributeBegin
+    NamedMaterial "maguro_material"
+    Shape "plymesh" "string filename" "mesh_00032.ply" 
+AttributeEnd
+# Name "maguro_slice1.013_Cube.017"
+
+AttributeBegin
+    NamedMaterial "maguro_material"
+    Shape "plymesh" "string filename" "mesh_00033.ply" 
+AttributeEnd
+# Name "maguro_slice1.014_Cube.018"
+
+AttributeBegin
+    NamedMaterial "maguro_material"
+    Shape "plymesh" "string filename" "mesh_00034.ply" 
+AttributeEnd
+# Name "maguro_slice1.015_Cube.005"
+
+AttributeBegin
+    NamedMaterial "maguro_material"
+    Shape "plymesh" "string filename" "mesh_00035.ply" 
+AttributeEnd
+# Name "maguro_slice1_Cube.003"
+
+AttributeBegin
+    NamedMaterial "maguro_material"
+    Shape "plymesh" "string filename" "mesh_00036.ply" 
+AttributeEnd
+# Name "wasabi_Suzanne_Suzanne"
+
+AttributeBegin
+    NamedMaterial "wasabi_EA_distance_shader_G"
+    Shape "plymesh" "string filename" "mesh_00037.ply" 
+AttributeEnd
+# Name "rice_hair_emitter_Sphere.009"
+
+AttributeBegin
+    NamedMaterial "rice_hair_emitter_material"
+    Shape "plymesh" "string filename" "mesh_00038.ply" 
+AttributeEnd
+# Name "rice_Sphere.008"
+
+AttributeBegin
+    NamedMaterial "rice_subscatter_glossy"
+    Shape "plymesh" "string filename" "mesh_00039.ply" 
+AttributeEnd
+WorldEnd
