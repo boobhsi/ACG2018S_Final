@@ -114,6 +114,29 @@ std::string ScaledBxDF::ToString() const {
            std::string(" scale: ") + scale.ToString() + std::string(" ]");
 }
 
+Spectrum MultiMicroBSDF::f(const Vector3f &wo, const Vector3f &wi) const {
+    float temp_f = m_microsurface->eval(wi, wo, 2);
+    Spectrum temp(temp_f);
+    return temp;
+}
+
+Spectrum MultiMicroBSDF::Sample_f(const Vector3f &wo, Vector3f *wi,
+                              const Point2f &sample, Float *pdf,
+                              BxDFType *sampledType) const {
+    *wi = m_microsurface->sample(wo);
+    *pdf = Pdf(wo, *wi);
+    Spectrum temp = f(wo, *wi);
+    return temp;
+}
+
+Float MultiMicroBSDF::Pdf(const Vector3f &wo, const Vector3f &wi) const {
+    return 0.9f * m_microsurface->evalSingleScattering(wi, wo) + 0.1f * BxDF::Pdf(wo, wi);
+}
+
+std::string MultiMicroBSDF::ToString() const {
+    return StringPrintf("MicrosurfaceDielectric");
+}
+
 Fresnel::~Fresnel() {}
 Spectrum FresnelConductor::Evaluate(Float cosThetaI) const {
     return FrConductor(std::abs(cosThetaI), etaI, etaT, k);

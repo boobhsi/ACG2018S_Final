@@ -37,7 +37,6 @@
 #include "reflection.h"
 #include "interaction.h"
 #include "texture.h"
-#include "interaction.h"
 
 namespace pbrt {
 

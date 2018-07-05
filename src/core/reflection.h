@@ -44,6 +44,8 @@
 #include "microfacet.h"
 #include "shape.h"
 #include "spectrum.h"
+#include "acg_final/MicrosurfaceScattering.h"
+#include <memory>
 
 namespace pbrt {
 
@@ -255,6 +257,25 @@ class ScaledBxDF : public BxDF {
   private:
     BxDF *bxdf;
     Spectrum scale;
+};
+
+class MultiMicroBSDF : public BxDF {
+public:
+    MultiMicroBSDF(const std::shared_ptr<Microsurface>& in, float alphau, float alphav) : BxDF(BxDFType(BSDF_TRANSMISSION | BSDF_GLOSSY)), m_microsurface(in) {
+        //if(m_microsurface == nullptr)_microsurface = new MicrosurfaceDielectric(false, false, alphax, alphay, 1.5);
+        in->refresh_alpha(alphau, alphav);
+    }
+    Spectrum f(const Vector3f &wo, const Vector3f &wi) const;
+    Spectrum Sample_f(const Vector3f &wo, Vector3f *wi,
+                              const Point2f &sample, Float *pdf,
+                              BxDFType *sampledType = nullptr) const;
+    Float Pdf(const Vector3f &wo, const Vector3f &wi) const;
+    ~MultiMicroBSDF() {
+
+    }
+    std::string ToString() const;
+private:
+    const std::shared_ptr<Microsurface>& m_microsurface;
 };
 
 class Fresnel {

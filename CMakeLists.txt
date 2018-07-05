@@ -445,6 +445,7 @@ FILE ( GLOB PBRT_SOURCE
   src/shapes/*.cpp
   src/textures/*.cpp
   src/media/*.cpp
+  src/acg_final/*.cpp
   )
 
 INCLUDE_DIRECTORIES ( src )
